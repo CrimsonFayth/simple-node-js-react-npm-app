@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+		echo "Starting build..."
+		echo "BUILD_NUMBER: ${env.BUILD_NUMBER}"
+                sh 'npm install'
+		echo "Finished build!"
             }
         }
     }
