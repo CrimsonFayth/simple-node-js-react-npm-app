@@ -9,5 +9,12 @@ pipeline {
 		echo "Finished build!"
             }
         }
+        stage('Test') {
+            steps {
+		echo "Starting test..."
+                sh './jenkins/scripts/test.sh'
+		echo "Finished test!"
+            }
+        }
     }
 }
